@@ -1,0 +1,299 @@
+.breadcrumbs
+  %ol
+    %li= link_to 'GOV.UK elements', elements_index_path
+    %li{ "aria-current": "page"} Typography
+
+%h1.heading-xlarge
+  %span.heading-secondary GOV.UK elements
+  Typography
+
+.text
+  %p.lede
+    For GOV.UK domains, always use the GDS Transport Website font in Light and Bold.
+
+%h2.heading-small.heading-contents Contents:
+.grid-row
+  .column-two-thirds
+    %ul.list.list-contents
+      %li=link_to 'Font', '#typography-font'
+      %li=link_to 'Headings', '#typography-headings'
+      %li=link_to 'Lead paragraph', '#typography-lead-paragraph'
+      %li=link_to 'Body copy', '#typography-body-copy'
+      %li=link_to 'Links', '#typography-links'
+      %li=link_to 'Lists', '#typography-lists'
+      %li=link_to 'Inset text','#typography-inset-text'
+      %li=link_to 'Legal text','#typography-legal-text'
+      %li=link_to 'Hidden text (progressive disclosure)', '#typography-hidden-text'
+      %li=link_to 'Examples', '#examples'
+
+%h3.heading-medium{ id: 'typography-font' } Font
+.text
+  %p Use the GDS Transport Website font in Light and Bold. It’s licensed for use on the GOV.UK domains only.
+  %p For services publicly available on different domains, use an alternative typeface like Arial.
+
+%h3.heading-medium{ id: 'typography-headings'} Headings
+%ul.list.list-bullet.text
+  %li use GDS Transport Website Bold
+  %li use sentence case for headings
+  %li use headings consistently to create a clear hierarchy
+
+.example
+  %h1.heading-xlarge
+    A
+    %em.highlight 48px Bold
+    heading
+  %h2.heading-large
+    A
+    %em.highlight 36px Bold
+    heading
+  %h3.heading-medium
+    A
+    %em.highlight 24px Bold
+    heading
+  %h4.heading-small
+    A
+    %em.highlight 19px Bold
+    heading
+
+
+%pre
+  %code.language-haml
+    :preserve
+      %h1.heading-xlarge A 48px Bold heading
+
+      %h2.heading-large A 36px Bold heading
+
+      %h3.heading-medium A 24px Bold heading
+
+      %h4.heading-small A 19px Bold heading
+
+%h3.heading-medium{ id: 'typography-lead-paragraph' } Lead paragraph
+%ul.list.list-bullet
+  %li use 24px for a lead paragraph
+  %li there should only be one lead paragraph per page
+
+.example
+  .text
+    %p.lede
+      A
+      %em.highlight 24px
+      lead paragraph, maecenas sed diam eget risus varius blandit sit amet non magna.
+
+    %p
+      A
+      %em.highlight 19px
+      body copy paragraph, maecenas sed diam eget risus varius blandit sit amet non magna.
+
+%pre
+  %code.language-haml
+    :preserve
+      %p.lede A 24px lead paragraph, maecenas sed diam eget risus varius blandit sit amet non magna.
+
+      %p A 19px body copy paragraph, maecenas sed diam eget risus varius blandit sit amet non magna.
+
+
+%h3.heading-medium{ id: 'typography-body-copy'} Body copy
+%ul.list.list-bullet.text
+  %li use GDS Transport Website Light
+  %li avoid using bold and italics
+  %li use 19px for body copy &ndash; 16px for smaller screens
+  %li use smaller sizes only if there’s a user need (eg 16px, 14px, 12px)
+  %li make sure lines of text don’t exceed 75 characters, as they become harder to read beyond that point
+
+.example
+  .text
+    %p
+      A
+      %em.highlight 19px
+      body copy paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.
+
+    %p.font-xsmall
+      A
+      %em.highlight 16px
+      supporting text paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.
+
+%pre
+  %code.language-haml
+    :preserve
+      %p A 19px body copy paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.
+
+      %p.font-xsmall A 16px supporting text paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.
+
+%h3.heading-medium{ id: 'typography-links' } Links
+%ul.list.list-bullet.text
+  %li links within body copy should be blue and underlined
+  %li links without surrounding text should not have a full stop at the end
+  %li link colours can be found in the <a href="/colour">colour palette</a>
+
+.example
+  .text
+    %p=link_to 'A 19px link without surrounding text','#'
+
+    %p
+      =link_to 'A 19px body copy link','#'
+      \. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+
+    =link_to 'Back','#', class: 'back-to-previous link-back'
+
+
+%pre
+  %code.language-haml
+    :preserve
+      %p=link_to 'A 19px link without surrounding text','#'
+
+      %p
+        =link_to 'A 19px body copy link','#'
+        \. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+
+      =link_to 'Back','#', class: 'back-to-previous link-back'
+
+%h3.heading-medium{ id: 'typography-lists' } Lists
+%p.text List items start with a lowercase letter and have no full stop at the end.
+
+.example
+  %ul.list.list-bullet
+    %li here is a bulleted list
+    %li vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor
+    %li vestibulum id ligula porta felis euismod semper
+    %li integer posuere erat a ante venenatis dapibus posuere velit aliquet
+
+  %ol.list.list-number
+    %li here is a numbered list
+    %li vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor
+    %li vestibulum id ligula porta felis euismod semper
+    %li integer posuere erat a ante venenatis dapibus posuere velit aliquet
+
+  %ul.list
+    %li=link_to 'Related link','#'
+    %li=link_to 'Related link','#'
+    %li=link_to 'Related link','#'
+    %li=link_to 'More','#', class: 'bold-xsmall'
+
+%pre
+  %code.language-haml
+    :preserve
+      %ul.list.list-bullet
+        %li here is a bulleted list
+        %li vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor
+        %li vestibulum id ligula porta felis euismod semper
+        %li integer posuere erat a ante venenatis dapibus posuere velit aliquet
+
+      %ol.list.list-number
+        %li here is a numbered list
+        %li vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor
+        %li vestibulum id ligula porta felis euismod semper
+        %li integer posuere erat a ante venenatis dapibus posuere velit aliquet
+
+      %ul.list
+        %li=link_to 'Related link','#'
+        %li=link_to 'Related link','#'
+        %li=link_to 'Related link','#'
+        %li=link_to 'More','#', class: 'bold-xsmall'
+
+%h3.heading-medium{ id: 'typography-inset-text'} Inset text
+%p.text
+  Use bordered inset text to draw attention to important content on the page.
+
+.example
+  .text
+    .panel.panel-border-wide
+      %p It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.
+
+%pre
+  %code.language-haml
+    :preserve
+      .panel.panel-border-wide
+        %p It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.
+
+%h3.heading-medium{ id: 'typography-legal-text' } Legal text
+%p.text
+  Use bold text with an exclamation icon if there are legal consequences - for example, a fine or prison sentence.
+
+.example
+  .text
+    .notice
+      %i.icon.icon-important
+        %span.visually-hidden Warning
+      %strong.bold-small You can be fined up to £5,000 if you don’t register.
+
+%pre
+  %code.language-haml
+    :preserve
+      .notice
+        %i.icon.icon-important
+          %span.visually-hidden Warning
+        %strong.bold-small You can be fined up to £5,000 if you don’t register.
+
+%h3.heading-medium{ id: 'typography-hidden-text' } Hidden text (progressive disclosure)
+%p.text
+  Use this to make your page easier to scan,
+  only showing contextual information when required.
+
+%p.text
+  Click on "Help with nationality" to see how this works.
+
+.example
+  %details
+    %summary
+      %span.summary Help with nationality
+
+    .panel.panel-border-narrow
+      %p If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card.
+      %p We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post.
+
+%pre
+  %code.language-haml
+    :preserve
+
+      %details
+        %summary
+          %span.summary Help with nationality
+
+        .panel.panel-border-narrow
+          %p If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card.
+          %p We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post.
+
+.panel.panel-border-wide.text
+  %p If you’re using the HTML5 details and summary elements, you’ll need a polyfill for <a href="http://caniuse.com/#feat=details" rel="external">not-so-modern browsers</a>.
+  %p You’ll need to ensure that your markup matches the example above. <a href="https://github.com/alphagov/govuk_elements/blob/master/public/javascripts/govuk/details.polyfill.js">GOV.UK elements uses this polyfill</a>.
+  %p <a href="/typography/example-details-summary/">Take a look at example page</a> which demonstrates conditionally revealing information, using the HTML5 details and summary elements.
+
+%h3.heading-medium{ id: 'examples'} Examples
+%ul.list.list-bullet
+  %li <a href="/typography/example-typography/"> an example typography page </a>
+
+:javascript
+  $(document).ready(function () {
+    // Turn off jQuery animation
+    jQuery.fx.off = true
+
+    // Where .multiple-choice uses the data-target attribute
+    // to toggle hidden content
+    var showHideContent = new GOVUK.ShowHideContent()
+    showHideContent.init()
+
+    // Use GOV.UK shim-links-with-button-role.js to trigger a link styled to look like a button,
+    // with role="button" when the space key is pressed.
+    GOVUK.shimLinksWithButtonRole.init()
+
+    // Details/summary polyfill
+    // See /javascripts/vendor/details.polyfill.js
+  })
+
+  $(window).load(function () {
+    // Only set focus for the error example pages
+    if ($('.js-error-example').length) {
+      // If there is an error summary, set focus to the summary
+      if ($('.error-summary').length) {
+        $('.error-summary').focus()
+        $('.error-summary a').click(function (e) {
+          e.preventDefault()
+          var href = $(this).attr('href')
+          $(href).focus()
+        })
+      } else {
+        // Otherwise, set focus to the field with the error
+        $('.error input:first').focus()
+      }
+    }
+  })

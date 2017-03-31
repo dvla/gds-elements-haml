@@ -1,0 +1,159 @@
+.breadcrumbs
+  %ol
+    %li= link_to 'GOV.UK elements', elements_index_path
+    %li{ "aria-current": "page"} Layout
+
+%h1.heading-xlarge
+  %span.heading-secondary GOV.UK elements
+  Layout
+
+.text
+  %p.lede Use white space to create a visual hierarchy on the page.
+
+%h2.heading-small.heading-contents Contents:
+
+.grid-row
+  .column-two-thirds
+    %ul.list.list-contents
+      %li=link_to 'Page width','#page-width'
+      %li=link_to 'Screen size','#screen-size'
+      %li=link_to 'Spacing','#layout-spacing'
+      %li=link_to 'Grid unit proportions','#layout-grid-unit-proportions'
+      %li=link_to 'Examples','#examples'
+
+%h3.heading-medium{ id: 'page-width'} Page width
+.text
+  %p The default maximum page width is 1020px, but go wider if the content requires it.
+  %p
+    =link_to 'Use a grid', '#layout-grid-unit-proportions'
+    to lay out your content. To prevent long lines of text, content should sit in a column which is two-thirds of the page width.
+  %p Long lines reduce legibility, so all lines of text should be no longer than 70 to 80 characters.
+
+%h3.heading-medium{ id: 'screen-size'} Screen size
+.text
+  %p Design for small screens first using a single column layout.
+  %p Optimise for different screen sizes, but don’t make assumptions about what devices people are using.
+
+%h3.heading-medium{ id: 'layout-spacing'} Spacing
+%ul.list.list-bullet.text
+  %li spacing between elements is usually 5px, 10px, 15px or multiples of 15px
+  %li gutters are 15px for smaller screens and 30px for larger screens
+.example.example-images
+  .grid-row
+    .column-one-half= image_tag 'examples/15px-gutter-example.png'
+    .column-one-half= image_tag 'examples/30px-gutter-example.png'
+
+%h3.heading-medium{ id: 'layout-grid-unit-proportions'} Grid unit proportions
+%ul.list.list-bullet.text
+  %li introduce columns as the content requires it – base column ratios on halves, thirds or quarters of the page width
+  %li for screen breakpoints use media queries &ndash; find these in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_conditionals.scss">_conditionals.scss</a> file
+
+%h4.heading-medium Full width
+.example.example-grid
+  .grid-row
+    .column-full
+      %p Content
+
+%pre
+  %code.language-haml
+    :preserve
+      .grid-row
+        .column-full
+          %p Content
+
+.h4.heading-medium Halves
+.example.example-grid
+  .grid-row
+    .column-one-half
+      %p Content
+
+    .column-one-half
+      %p Content
+
+%pre
+  %code.language-haml
+    :preserve
+      .grid-row
+        .column-one-half
+          %p Content
+
+        .column-one-half
+          %p Content
+
+.h4.heading-medium Thirds
+.example.example-grid
+  .grid-row
+    .column-one-third
+      %p Content
+
+    .column-one-third
+      %p Content
+
+    .column-one-third
+      %p Content
+
+
+%pre
+  %code.language-haml
+    :preserve
+      .grid-row
+        .column-one-third
+          %p Content
+
+        .column-one-third
+          %p Content
+
+        .column-one-third
+          %p Content
+
+
+.h4.heading-medium Two thirds / One third
+.example.example-grid
+  .grid-row
+    .column-two-thirds
+      %p Content
+
+    .column-one-third
+      %p Content
+
+%pre
+  %code.language-haml
+    :preserve
+      .grid-row
+        .column-two-thirds
+          %p Content
+
+        .column-one-third
+          %p Content
+
+.h4.heading-medium Quarters
+.example.example-grid
+  .grid-row
+    .column-one-quarter
+      %p Content
+
+    .column-one-quarter
+      %p Content
+
+    .column-one-quarter
+      %p Content
+
+    .column-one-quarter
+      %p Content
+
+%pre
+  %code.language-haml
+    :preserve
+      .grid-row
+
+        .column-one-quarter
+          %p Content
+
+        .column-one-quarter
+          %p Content
+
+        .column-one-quarter
+          %p Content
+
+        .column-one-quarter
+          %p Content

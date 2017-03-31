@@ -1,0 +1,301 @@
+.breadcrumbs
+  %ol
+    %li= link_to 'GOV.UK elements', elements_index_path
+    %li{ "aria-current": "page"} Colour
+
+%h1.heading-xlarge
+  %span.heading-secondary GOV.UK elements
+  Colour
+
+%p.lede.text Always use the GOV.UK colour palette.
+
+%h2.heading-small.heading-contents Contents:
+.grid-row
+  .column-two-thirds
+    %ul.list.list-contents
+      %li=link_to 'Colour contrast', '#colour-contrast'
+      %li=link_to 'Sass variables', '#colour-sass-variables'
+      %li=link_to 'Status colours', '#colour-status-colours'
+      %li=link_to 'Greyscale palette', '#colour-greyscale-palette'
+      %li=link_to 'Extended palette', '#colour-extended-palette'
+      %li=link_to 'Examples', '#examples'
+
+%h3.heading-medium{ id: 'colour-contrast'} Colour contrast
+%p.text The colour contrast ratio for text and interactive elements should be at least 4.5:1 <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html" rel="external">as recommended by the W3C</a>. Test your service to meet this standard.
+
+%h3.heading-medium{ id: 'colour-sass-variables'} Sass variables
+%p.text     Use Sass variables in case colour values need to be updated &ndash; find these in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_colours.scss" rel="external">colours.scss</a> file.
+
+.example
+  .swatch-wrapper
+    %h4.heading-small Text
+    .swatch.swatch-text-colour
+    %ul
+      %li
+        %b #0B0C0C
+      %li $text-colour
+
+    .swatch.swatch-text-secondary
+    %ul
+      %li
+        %b #6F777B
+      %li $secondary-text-colour
+
+    .swatch.swatch-page-colour
+    %ul
+      %li
+        %b #FFFFFF
+      %li $page-colour
+
+  .swatch-wrapper
+    %h4.heading-small Links
+    .swatch.swatch-link-colour
+    %ul
+      %li
+        %b #005ea5
+      %li $link-colour
+
+    .swatch.swatch-link-colour-hover
+    %ul
+      %li
+        %b #2b8cc4
+      %li $link-hover-colour
+    .swatch.swatch-link-colour-visited
+    %ul
+      %li
+        %b #4c2c92
+      %li $link-visited-colour
+
+  .swatch-wrapper
+    %h4.heading-small Backgrounds
+    .swatch.swatch-border-colour
+    %ul
+      %li
+        %b #BFC1C3
+      %li $border-colour
+
+    .swatch.swatch-panel-colour
+    %ul
+      %li
+        %b #DEE0E2
+      %li $panel-colour
+    .swatch.swatch-highlight-colour
+    %ul
+      %li
+        %b #F8F8F8
+      %li $highlight-colour
+
+  .swatch-wrapper
+    %h4.heading-small Buttons
+    .swatch.swatch-button-colour
+    %ul
+      %li
+        %b #00823B
+      %li $button-colour
+
+    .swatch.swatch-green
+    %ul
+      %li
+        %b #006435
+      %li $green (hover colour)
+
+  .swatch-wrapper
+    %h4.heading-small Focus
+    .swatch.swatch-yellow
+    %ul
+      %li
+        %b #FFBF47
+      %li $focus-colour
+
+%h3.heading-medium{ id: 'colour-status-colours'} Status colours
+.example
+  .swatch-wrapper
+    .swatch.swatch-govuk-blue
+    %ul
+      %li
+        %b #005ea5
+      %li $govuk-blue
+    %p Use for Alpha and Beta banners
+  .swatch-wrapper
+    .swatch.swatch-error
+    %ul
+      %li
+        %b #B10E1E
+      %li $error-colour
+    %p Use for error messages
+
+
+%h3.heading-medium{ id: 'colour-greyscale-palette'} Greyscale palette
+.example
+  .swatch-wrapper
+    .swatch.swatch-black
+    %ul
+      %li
+        %b #0B0C0C
+      %li $black
+
+  .swatch-wrapper
+    .swatch.swatch-grey-1
+    %ul
+      %li
+        %b #6F777B
+      %li $grey-1
+
+  .swatch-wrapper
+    .swatch.swatch-grey-2
+    %ul
+      %li
+        %b #BFC1C3
+      %li $grey-2
+
+  .swatch-wrapper
+    .swatch.swatch-grey-3
+    %ul
+      %li
+        %b #DEE0E2
+      %li $grey-3
+
+  .swatch-wrapper
+    .swatch.swatch-grey-4
+    %ul
+      %li
+        %b #F8F8F8
+      %li $grey-4
+
+%h3.heading-medium{ id: 'colour-extended-palette'} Extended palette
+%ul.list.list-bullet.text
+  %li used for graphs and supporting material
+  %li for tints of the extended palette use 50% or 25%
+  %li for departmental colours &ndash; find these in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/colours/_organisation.scss" rel="external">organisation.scss file</a>
+
+
+.example
+  .swatch-wrapper
+    %h4.heading-small Purple
+    .swatch.swatch-purple
+    %ul
+      %li
+        %b #2e358b
+      %li $purple
+
+    %h4.heading-small Mauve
+    .swatch.swatch-mauve
+    %ul
+      %li
+        %b #6f72af
+      %li $mauve
+
+    %h4.heading-small Fuschia
+    .swatch.swatch-fuschia
+    %ul
+      %li
+        %b #912b88
+      %li $fuschia
+
+  .swatch-wrapper
+    %h4.heading-small Pink
+    .swatch.swatch-pink
+    %ul
+      %li
+        %b #d53880
+      %li $pink
+
+    %h4.heading-small Baby pink
+    .swatch.swatch-baby-pink
+    %ul
+      %li
+        %b #f499be
+      %li $baby-pink
+
+    %h4.heading-small Red
+    .swatch.swatch-red
+    %ul
+      %li
+        %b #b10e1e
+      %li $red
+
+  .swatch-wrapper
+    %h4.heading-small Mellow red
+    .swatch.swatch-pink
+    %ul
+      %li
+        %b #d53880
+      %li $pink
+
+    %h4.heading-small Orange
+    .swatch.swatch-orange
+    %ul
+      %li
+        %b #f47738
+      %li $orange
+
+    %h4.heading-small Brown
+    .swatch.swatch-brown
+    %ul
+      %li
+        %b #b58840
+      %li $brown
+
+  .swatch-wrapper
+    %h4.heading-small Yellow
+    .swatch.swatch-yellow
+    %ul
+      %li
+        %b #ffbf47
+      %li $pink
+
+    %h4.heading-small Green
+    .swatch.swatch-green
+    %ul
+      %li
+        %b #006435
+      %li $green
+
+    %h4.heading-small Grass green
+    .swatch.swatch-grass-green
+    %ul
+      %li
+        %b #85994b
+      %li $grass-green
+
+
+  .swatch-wrapper
+    %h4.heading-small Turquoise
+    .swatch.swatch-turquoise
+    %ul
+      %li
+        %b #28a197
+      %li $turquoise
+
+    %h4.heading-small Light blue
+    .swatch.swatch-light-blue
+    %ul
+      %li
+        %b #2b8cc4
+      %li $light-blue
+
+    %h4.heading-small GOV.UK blue
+    .swatch.swatch-govuk-blue
+    %ul
+      %li
+        %b #005ea5
+      %li $govuk-blue
+
+%p <a href="https://designpatterns.hackpad.com/Colour-PDuGV42pJqx" rel="external"> Discuss colour on the design patterns Hackpad</a>
+
+%h3.heading-medium{ id: 'examples' } Examples
+%h3.heading-small Transaction end page
+
+.example
+  .column-two-thirds
+    %h1.heading-xlarge Example service name
+
+    .govuk-box-highlight
+      %h2.bold-large Application complete
+      %p Your reference number is <br> <strong class="heading-medium">HDJ2123F</strong>
+
+    %p We have sent you a confirmation email.
+
+    %h2.heading-medium What happens next?
+    %p We’ve sent your application to Hackney Electoral Register Office.
+    %p They will contact you either to confirm your registration, or to ask for more information.

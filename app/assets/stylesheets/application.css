@@ -1,0 +1,339 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require govuk
+ *= require prism
+ *= require_self
+ */
+ .example-button .heading-small {
+   margin-top: 0;
+ }
+
+ .example-button .swatch-wrapper {
+   width: 100%;
+ }
+
+.example .highlight {
+    font-style: normal;
+    color: #0076c0;
+}
+
+ .example-images img {
+   max-width: 100%;
+   vertical-align: top;
+ }
+
+ .example-grid p {
+  width: 100%;
+  background: url("/grid.png") 0 0 repeat;
+  margin-bottom: 0;
+  height: 30px;
+  overflow: hidden;
+  text-indent: -999em;
+}
+
+@media (min-width: 641px) {
+  .example-grid p {
+    height: 60px;
+  }
+}
+
+
+ .example {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #bfc1c3;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-top: 30px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 641px) {
+  .example {
+    padding-top: 45px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+  }
+}
+
+ .example:before {
+    content: "EXAMPLE";
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.2105263158em 0.7894736842em 0.2105263158em 0.7894736842em;
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 12px;
+    line-height: 1.25;
+    background: #bfc1c3;
+    color: white;
+}
+
+.code {
+  color: #0b0c0c;
+  background-color: #f8f8f8;
+  text-shadow: 0 1px #fff;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 14px;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  border: 1px solid #bfc1c3;
+  padding: 4px 4px 2px;
+}
+
+
+main {
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 19px;
+    line-height: 1.25;
+    -webkit-font-smoothing: antialiased;
+}
+
+.swatch {
+  width: 60px;
+  height: 60px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+}
+
+@media (max-width: 640px) {
+  .swatch {
+    clear: both;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 641px) {
+  .swatch {
+    margin: 0 auto 15px auto;
+  }
+}
+
+.swatch-purple {
+  background-color: #2e358b;
+}
+
+.swatch-mauve {
+  background-color: #6f72af;
+}
+
+.swatch-fuschia {
+  background-color: #912b88;
+}
+
+.swatch-pink {
+  background-color: #d53880;
+}
+
+.swatch-baby-pink {
+  background-color: #f499be;
+}
+
+.swatch-red {
+  background-color: #b10e1e;
+}
+
+.swatch-mellow-red {
+  background-color: #df3034;
+}
+
+.swatch-orange {
+  background-color: #f47738;
+}
+
+.swatch-brown {
+  background-color: #b58840;
+}
+
+.swatch-yellow {
+  background-color: #ffbf47;
+}
+
+.swatch-green {
+  background-color: #006435;
+}
+
+.swatch-grass-green {
+  background-color: #85994b;
+}
+
+.swatch-turquoise {
+  background-color: #28a197;
+}
+
+.swatch-light-blue {
+  background-color: #2b8cc4;
+}
+
+.swatch-govuk-blue {
+  background-color: #005ea5;
+}
+
+.swatch-alpha {
+  background-color: #005ea5;
+}
+
+.swatch-beta {
+  background-color: #005ea5;
+}
+
+.swatch-discovery {
+  background-color: #005ea5;
+}
+
+.swatch-live {
+  background-color: #85994b;
+}
+
+.swatch-error {
+  background-color: #b10e1e;
+}
+
+.swatch-focus {
+  background-color: #ffbf47;
+}
+
+.swatch-button-colour {
+  background-color: #00823b;
+}
+
+.swatch-black {
+  background-color: #0b0c0c;
+}
+
+.swatch-grey-1 {
+  background-color: #6f777b;
+}
+
+.swatch-grey-2 {
+  background-color: #bfc1c3;
+}
+
+.swatch-grey-3 {
+  background-color: #dee0e2;
+}
+
+.swatch-grey-4 {
+  background-color: #f8f8f8;
+}
+
+.swatch-white {
+  background-color: #fff;
+  border: 1px solid #dee0e2;
+}
+
+.swatch-text-colour {
+  background-color: #0b0c0c;
+}
+
+.swatch-text-secondary {
+  background-color: #6f777b;
+}
+
+.swatch-page-colour {
+  background-color: #fff;
+  border: 1px solid #dee0e2;
+}
+
+.swatch-button-colour {
+  background-color: #00823b;
+}
+
+.swatch-link-colour {
+  background-color: #005ea5;
+}
+
+.swatch-link-colour-visited {
+  background-color: #4c2c92;
+}
+
+.swatch-link-colour-hover {
+  background-color: #2b8cc4;
+}
+
+.swatch-border-colour {
+  background-color: #bfc1c3;
+}
+
+.swatch-panel-colour {
+  background-color: #dee0e2;
+}
+
+.swatch-highlight-colour {
+  background-color: #f8f8f8;
+}
+
+@media (min-width: 641px) {
+  .swatch-wrapper {
+    float: left;
+    width: 20%;
+    text-align: center;
+  }
+}
+
+.swatch-wrapper .heading-small {
+  margin-bottom: 0.5263157895em;
+}
+
+.swatch-wrapper ul {
+  list-style-type: none;
+  padding-bottom: 15px;
+}
+
+@media (max-width: 640px) {
+  .swatch-wrapper ul {
+    min-height: 50px;
+    padding-top: 10px;
+  }
+}
+
+.swatch-wrapper li {
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 14px;
+  line-height: 1.1428571429;
+}
+
+@media (min-width: 641px) {
+  .swatch-wrapper li {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+.swatch-wrapper b {
+  font-weight: bold;
+  text-transform: uppercase;
+}

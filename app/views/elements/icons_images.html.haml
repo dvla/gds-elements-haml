@@ -1,0 +1,53 @@
+.breadcrumbs
+  %ol
+    %li= link_to 'GOV.UK elements', elements_index_path
+    %li{ "aria-current": "page"} Icons and images
+
+%h1.heading-xlarge
+  %span.heading-secondary GOV.UK elements
+  Icons and images
+
+%p.lede.text Avoid unnecessary decoration - only use icons and images if there’s a real user need.
+
+%h2.heading-small.heading-contents Contents:
+.grid-row
+  .column-two-thirds
+    %ul.list.list-contents
+      %li=link_to 'Icons', '#icons'
+      %li=link_to 'Images', '#images'
+      %li=link_to 'Examples', '#examples'
+
+%h3.heading-medium{ id: 'icons'} Icons
+%ul.list.list-bullet.text
+  %li if icons are needed ensure they are clear, simple and accompanied by relevant text
+  %li don’t hide functionality under icons
+
+%p.text GOV.UK standard icons are provided, as well as organisation crests and media player icons &ndash; find these in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/tree/master/images" rel="external">images folder</a>.
+
+%h4.heading-small Legal text
+%p.text Use bold text with an exclamation icon if there are legal consequences - for example, a fine or prison sentence.
+
+.example
+  .text
+    .notice
+      %i.icon.icon-important
+        %span.visually-hidden Warning
+      %strong.bold-small You can be fined up to £5,000 if you don’t register.
+
+%pre
+  %code.language-haml
+    :preserve
+      .notice
+        %i.icon.icon-important
+          %span.visually-hidden Warning
+        %strong.bold-small You can be fined up to £5,000 if you don’t register.
+
+%h3.heading-medium{ id: 'images'} Images
+%p If images are needed they should be landscape, 3:2 aspect ratio.
+
+.example.example-images
+  .grid-row
+    .column-one-half
+      =image_tag 'examples/3by2.jpg'
+    .column-one-half
+      =image_tag 'examples/larry-the-cat.jpg'
