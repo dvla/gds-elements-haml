@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'elements/buttons', to: 'elements#buttons'
   get 'elements/form', to: 'elements#form'
   get 'elements/errors', to: 'elements#errors'
+  get 'elements/banners', to: 'elements#banners'
 
   root to: 'elements#index'
 

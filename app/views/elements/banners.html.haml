@@ -1,0 +1,88 @@
+.breadcrumbs
+  %ol
+    %li= link_to 'GOV.UK elements', elements_index_path
+    %li{ "aria-current": "page"} Alpha and beta banners
+
+%h1.heading-xlarge
+  %span.heading-secondary GOV.UK elements
+  Alpha and beta banners
+
+%p.lede.text You have to use an alpha banner if your thing is in alpha, and a beta banner if it’s in beta.
+
+%h2.heading-small.heading-contents Contents:
+.grid-row
+  .column-two-thirds
+    %ul.list.list-contents
+      %li=link_to 'Alpha banner', '#alpha-banner'
+      %li=link_to 'Beta banner', '#beta-banner'
+      %li=link_to 'Phase tags', '#phase-tags'
+      %li=link_to 'Creating phase banners', '#creating-phase-banners'
+
+%h3.heading-medium Alpha banner
+.example
+  .phase-banner
+    %p
+      %strong.phase-tag ALPHA
+      %span
+        This is a new service – your
+        =link_to 'feedback', '#'
+        will help us to improve it.
+
+%pre
+  %code.language-haml
+    :preserve
+      .phase-banner
+        %p
+          %strong.phase-tag ALPHA
+          %span
+            This is a new service – your
+            =link_to 'feedback', '#'
+            will help us to improve it.
+
+%h3.heading-medium{ id: 'beta-banner'} Beta banner
+.example
+  .phase-banner
+    %p
+      %strong.phase-tag BETA
+      %span
+        This is a new service – your
+        =link_to 'feedback', '#'
+        will help us to improve it.
+
+%pre
+  %code.language-haml
+    :preserve
+      .phase-banner
+        %p
+          %strong.phase-tag BETA
+          %span
+            This is a new service – your
+            =link_to 'feedback', '#'
+            will help us to improve it.
+
+%h3.heading-medium{ id: 'phase-tags'} Alpha and Beta phase tags
+%p Phase tags are mostly used inside phase banners as an indication of the state of a project. It’s possible to use them outside phase banners, for example as part of a service header.
+
+%h4.heading-small Alpha tag
+.example
+  %strong.phase-tag ALPHA
+%pre
+  %code.language-haml
+    :preserve
+      %strong.phase-tag ALPHA
+
+%h4.heading-small Beta tag
+.example
+  %strong.phase-tag BETA
+
+%pre
+  %code.language-haml
+    :preserve
+      %strong.phase-tag BETA
+
+%h3.heading-medium{ id: 'creating-phase-banners'} Creating alpha and beta banners
+%p.text Use the GOV.UK Sass phase banner mixin &ndash; find this in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/design-patterns/_alpha-beta.scss">alpha-beta.scss</a> file.
+
+%p.text If you’ve previously used <code class="code">phase-banner-alpha</code> or <code class="code">phase-banner-beta</code> classes in your markup you should change them to <code class="code">phase-banner</code>.
+
+%p <a href="https://designpatterns.hackpad.com/Alpha-and-beta-banners-HpbaBjaYRSJ" rel="external">Discuss alpha and beta banners on the design patterns Hackpad</a>
